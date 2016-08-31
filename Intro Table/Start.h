@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Start : UIViewController
+@interface Start : UIViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
+@property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
 
