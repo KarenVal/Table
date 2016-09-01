@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4AED2B21D77B3D600E411DD /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AED2B11D77B3D600E411DD /* IntroViewController.m */; };
+		F4AED2B51D77B50B00E411DD /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AED2B41D77B50B00E411DD /* Declarations.m */; };
 		F4F745ED1D769B6E00164B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F745EC1D769B6E00164B49 /* main.m */; };
 		F4F745F01D769B6E00164B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F745EF1D769B6E00164B49 /* AppDelegate.m */; };
 		F4F745F31D769B6E00164B49 /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F745F21D769B6E00164B49 /* Start.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4AED2B01D77B3D600E411DD /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		F4AED2B11D77B3D600E411DD /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		F4AED2B31D77B50B00E411DD /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
+		F4AED2B41D77B50B00E411DD /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
 		F4F745E81D769B6E00164B49 /* Intro Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intro Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F745EC1D769B6E00164B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4F745EE1D769B6E00164B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 			children = (
 				F4F745EE1D769B6E00164B49 /* AppDelegate.h */,
 				F4F745EF1D769B6E00164B49 /* AppDelegate.m */,
+				F4AED2B31D77B50B00E411DD /* Declarations.h */,
+				F4AED2B41D77B50B00E411DD /* Declarations.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -55,6 +63,8 @@
 			children = (
 				F4F745F11D769B6E00164B49 /* Start.h */,
 				F4F745F21D769B6E00164B49 /* Start.m */,
+				F4AED2B01D77B3D600E411DD /* IntroViewController.h */,
+				F4AED2B11D77B3D600E411DD /* IntroViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -170,8 +180,10 @@
 			files = (
 				F4F745F31D769B6E00164B49 /* Start.m in Sources */,
 				F4F745F01D769B6E00164B49 /* AppDelegate.m in Sources */,
+				F4AED2B51D77B50B00E411DD /* Declarations.m in Sources */,
 				F4F745ED1D769B6E00164B49 /* main.m in Sources */,
 				F4F745F91D769B6E00164B49 /* Intro_Table.xcdatamodeld in Sources */,
+				F4AED2B21D77B3D600E411DD /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
