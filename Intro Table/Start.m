@@ -12,6 +12,10 @@
 
 @end
 
+/********************************************************/
+#pragma mark - Init¡alization methods
+/********************************************************/
+
 @implementation Start
 
 - (void)viewDidLoad {
@@ -23,5 +27,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/********************************************************/
+#pragma mark - Page controller methods and delegates
+/********************************************************/
+
 
 @end
