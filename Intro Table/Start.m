@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self initController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,9 +46,10 @@
     self.pageViewController             = [self.storyboard instantiateViewControllerWithIdentifier:@"PageIntroController"];
     self.pageViewController.dataSource  = self;
     
-    Intro *startingViewController       = [self viewControllerAtIndex:0];
+    IntroViewController *startingViewController       = [self viewControllerAtIndex:0];
     NSArray *viewControllers            = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
     // Change the size of page view controller
     self.pageViewController.view.frame  = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
     [self addChildViewController:self.pageViewController];
@@ -65,21 +66,23 @@
     thisControl.hidden = true;
 }
 //-------------------------------------------------------------------------------
-- (Intro *)viewControllerAtIndex:(NSUInteger)index
+- (IntroViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([maIntroTitles count] == 0) || (index >= [maIntroTitles count])) {
         return nil;
     }
     // Create a new view controller and pass suitable data.
-    Intro *pageIntro            = [self.storyboard instantiateViewControllerWithIdentifier:@"Intro"];
-    pageIntro.iPageIndex        = index;
+    IntroViewController *pageIntro            = [self.storyboard instantiateViewControllerWithIdentifier:@"Intro"];
+
+    pageIntro.lblIntro = maIntroTitles[index];
+    pageIntro.iPageIndex = index;
     
     return pageIntro;
 }
 //-------------------------------------------------------------------------------
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((Intro*) viewController).iPageIndex;
+    NSUInteger index = ((IntroViewController*) viewController).iPageIndex;
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -90,7 +93,7 @@
 //-------------------------------------------------------------------------------
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((Intro*) viewController).iPageIndex;
+    NSUInteger index = ((IntroViewController*) viewController).iPageIndex;
     
     if (index == NSNotFound) {
         return nil;

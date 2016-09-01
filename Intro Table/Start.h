@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Declarations.h"
+#import "IntroViewController.h"
 
 @interface Start : UIViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
